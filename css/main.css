@@ -1,3 +1,5 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 /* Variables Starte */
 :root{
     --main-color:#00c7fc;
@@ -15,6 +17,7 @@
     padding: 0; margin: 0;
     text-decoration: none; list-style: none;
     scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
 }
 .container{
     padding-left: 15px;
@@ -50,6 +53,7 @@ header .container{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    min-height: 98.9px;
 }
 header .container::before{
     content: "";
@@ -65,28 +69,62 @@ header .container nav{
     display: flex;
     justify-content: flex-end;
 }
+header .container nav .i-bars{
+    display: none;
+}
+header .container nav .i-bars:hover + ul {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 50%);
+    left: 15px;
+    top: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 30px);
+}
+header .container nav .i-bars:hover + ul li a {
+    padding: 30px 20px;
+}
 header .container nav ul{
     display: flex;    
+}
+@media (max-width:767px){
+    header .container nav .i-bars{
+        display: block;
+        color: #fff;
+        align-self: center;
+        font-size: 25px;
+        margin-right: 25px;
+    }
+    header .container nav ul{
+        display: none;
+    }
 }
 header .container nav ul li a{
     padding: 40px 10px;
     display: block;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     margin-right: 15px;
+}
+@media (max-width:991px){
+    header .container nav ul li a{
+        margin-right: 0;
+    }
 }
 header .container nav ul li a:hover{
     color: var(--main-color);
     border-bottom: 2px solid var(--main-color);
 }
 header .container nav ul li .action{
+    color: var(--main-color);
     border-bottom: 2px solid var(--main-color);
 }
-header .container nav i{
+header .container nav .i-search{
     align-self: center;
-    padding: 6px;
+    padding: 6px 8px;
     border-left: 1px solid #fff;
-    font-size: 20px;
+    font-size: 21px;
     color: #fff;
 }
 /* Header End */
