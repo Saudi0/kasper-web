@@ -42,7 +42,56 @@
     .container {
         width: 1170px;
     }
+} 
+/* Titel Section Start */
+.container-titel{
+    text-align: center;
 }
+.container-titel .text h1{
+    font-weight: normal;
+    position: relative;
+    margin-bottom: 40px;
+}
+.container-titel .text h1::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.container-titel .text h1::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background: black;
+    bottom: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container-titel .text p{
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+/* Titel Section End */
+/* overflo Start */
+.overflo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 /30%);
+}
+/* overflo End */
 /* Global Rules End*/
 /* Header Start */
 header{
@@ -210,3 +259,96 @@ header .container nav .i-search{
     background-color: var(--main-color);
 }
 /* Landing Section End */
+/* Service Section Start */
+.services{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+.services .container{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 991px){
+    .services .container{
+        flex-direction: column;
+        
+    }
+}
+.services .container .srv{
+    display: flex;
+    margin-bottom: 65px;
+    margin-right: 40px;
+}
+@media (max-width: 770px){
+    .services .container .srv{
+        display: block;
+        text-align: center;
+        margin-right: 0;
+    }
+    .services .container .srv i{
+        margin-bottom: 15px;
+    }
+}
+.services .container .srv i{
+    margin-right: 20px;
+}
+.services .container .srv h3{
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.services .container .srv p{
+        color: #777;
+        line-height: 1.4;
+    }
+/* Service Section End */
+/* Design Start */
+.design{
+    height: 80vh;
+    position: relative;
+    background: url(../imges/pngtree-design.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.design .card{
+    width: 55%;
+    height: 55%;
+    background-color: #0c5772;
+    padding: 45px;
+    align-self: center;
+}
+.design .card p{
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+.design .card li{
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+.design .card li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+}
+.design img{
+    border-style: none;
+    position: absolute;
+    left: 60px;
+    bottom: -56px;
+}
+@media (max-width:904px){
+    .design .card{
+        width: 100%;
+        height: 47%;
+    }
+    .design img{
+        display: none;
+    }
+}
+/* Design End */
