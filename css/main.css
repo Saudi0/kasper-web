@@ -261,8 +261,8 @@ header .container nav .i-search{
 /* Landing Section End */
 /* Service Section Start */
 .services{
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--padding-sectoin);
+    padding-bottom: var(--padding-sectoin);
     background-color: #f6f6f6;
 }
 .services .container{
@@ -306,8 +306,7 @@ header .container nav .i-search{
 .design{
     height: 80vh;
     position: relative;
-    background: url(../imges/pngtree-design.jpg) no-repeat;
-    background-size: cover;
+    background: url(../imges/pngtree-design.jpg) no-repeat; background-position: center; background-size: cover;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
@@ -352,3 +351,71 @@ header .container nav .i-search{
     }
 }
 /* Design End */
+/* Protfolio Section Start  */
+.protfolio{
+    padding-top: var(--padding-sectoin);
+    padding-bottom: var(--padding-sectoin);
+}
+.protfolio ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.protfolio ul a{
+    padding: 10px;
+    color: #000;
+}
+.protfolio ul .action,
+.protfolio ul a:hover{
+    background-color: var(--main-color);
+}
+.container-protfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(320px , 1fr));
+}
+.container-protfolio .srv img{
+    width: 100%;
+    transition: var(--tran-time);
+}
+.container-protfolio .srv{
+    position: relative;
+    overflow: hidden;
+}
+.container-protfolio .srv .caption{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    background-color: #fff;
+    bottom: 0;
+    margin-bottom: -70px;
+    transition: var(--tran-time);
+}
+.container-protfolio .srv:hover .caption{
+    margin-bottom: 0;
+}
+.container-protfolio .srv:hover img{
+    transform: rotate(3deg) scale(1.1);
+}
+.container-protfolio .srv .caption h4{
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.container-protfolio .srv .caption p{
+    color: var(--main-color);
+}
+.botom-more{
+    margin-top: 50px;
+    text-align: center;
+}
+.botom-more a{
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* Protfolio Section End  */
