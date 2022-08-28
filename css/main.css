@@ -419,3 +419,39 @@ header .container nav .i-search{
     text-transform: uppercase;
 }
 /* Protfolio Section End  */
+/* Video Start */
+.video{
+    position: relative;
+}
+video{
+    max-width: 100%;
+}
+.video .card{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 35%;
+    text-align: center;
+    background-color: #00c7fcb3;
+    padding: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video .card .text h3{
+    color: #fff;
+    font-weight: normal;
+}
+.video .card .text p{
+    color: #fff;
+    margin: 20px 0;
+}
+.video .card .text button{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+}
+/* Video End */
